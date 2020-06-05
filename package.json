@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "postbuild": "size-limit",
-    "prepublish": "rm -rf lib && npm run build"
+    "prepare": "rm -rf lib && npm run build"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.5.0",
