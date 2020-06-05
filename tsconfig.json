@@ -4,10 +4,12 @@
     "downlevelIteration": true,
     "experimentalDecorators": false,
     "forceConsistentCasingInFileNames": true,
+    "lib": ["dom", "es6", "es2016", "es2017"],
     "outDir": "lib",
     "removeComments": true,
+    "importHelpers": true,
     "sourceMap": false,
     "strict": true,
-    "target": "esnext"
+    "target": "es5"
   }
 }

@@ -1,15 +1,9 @@
-const year = new Date().getFullYear();
-const monthList = [...Array(12).keys()];
+const Y = new Date().getFullYear();
+const L = [...Array(12).keys()];
 
-export function getMonthList(
-  locales?: string | string[],
-  format: "long" | "short" = "long"
-): string[] {
-  const formatter = new Intl.DateTimeFormat(locales, {
-    month: format,
-  });
-
-  return monthList.map((monthIndex: number) =>
-    formatter.format(new Date(year, monthIndex))
+export const getMonthList = (l?: string | string[], f?: string): string[] =>
+  L.map((i: number) =>
+    new Intl.DateTimeFormat(l, {
+      month: f || "long",
+    }).format(new Date(Y, i))
   );
-}
