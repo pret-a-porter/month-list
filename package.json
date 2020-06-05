@@ -1,0 +1,25 @@
+{
+  "name": "month-list",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pret-a-porter/month-list.git",
+  "author": "Maksim Sharipov <m.v.sharipov@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "size-limit",
+    "prepublish": "rm -rf lib && npm run build"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.5.0",
+    "size-limit": "^4.5.0",
+    "typescript": "^3.9.5"
+  },
+  "size-limit": [
+    {
+      "path": "lib/index.js",
+      "limit": "300B",
+      "webpack": false
+    }
+  ]
+}

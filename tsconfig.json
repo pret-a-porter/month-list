@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": false,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "lib",
+    "removeComments": true,
+    "sourceMap": false,
+    "strict": true,
+    "target": "esnext"
+  }
+}
