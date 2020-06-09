@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/month-list.svg)](https://badge.fury.io/js/month-list)
+
 # month-list
 
 Module exports only one function `getMonthList`
