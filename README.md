@@ -2,7 +2,7 @@
 
 # month-list
 
-Module exports only one function `getMonthList`
+Module exports two functions `getMonthList` and `getWeekDays`
 
 Function returns month list in your locale;
 
@@ -54,3 +54,38 @@ Nov
 Dec
 ```
 
+🇬🇧 `getWeekDays('en')` will return:
+
+```js
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+```
+
+🇬🇧 `getWeekDays('en', 'short')` will return:
+
+```js
+Mon
+Tue
+Wed
+Thu
+Fri
+Sat
+Sun
+```
+
+🇬🇧 `getWeekDays('en', 'narrow')` will return:
+
+```js
+M
+T
+W
+T
+F
+S
+S
+```
