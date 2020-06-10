@@ -2,7 +2,7 @@ import { getWeekDays } from '../index';
 
 describe('getWeekDays', () => {
   test('Should return list of week days', () => {
-    expect(getWeekDays('ru')).toEqual([
+    expect(getWeekDays('en')).toEqual([
       'Monday',
       'Tuesday',
       'Wednesday',
@@ -10,6 +10,18 @@ describe('getWeekDays', () => {
       'Friday',
       'Saturday',
       'Sunday',
+    ]);
+  });
+
+  test('Should start week from sunday', () => {
+    expect(getWeekDays('en', 'long', true)).toEqual([
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
     ]);
   });
 

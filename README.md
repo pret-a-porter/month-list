@@ -66,6 +66,18 @@ Saturday
 Sunday
 ```
 
+🇬🇧 `getWeekDays('en', 'long', true)` will return:
+
+```js
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+```
+
 🇬🇧 `getWeekDays('en', 'short')` will return:
 
 ```js

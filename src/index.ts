@@ -11,9 +11,10 @@ export const getMonthList = (
 export const getWeekDays = (
   l?: string | string[],
   f?: 'long' | 'short' | 'narrow',
+  s?: boolean,
 ) =>
   Array.from(Array(7).keys(), (i) =>
     new Intl.DateTimeFormat(l, {
       weekday: f || 'long',
-    }).format(new Date(0, 0, i + 1)),
+    }).format(new Date(0, 0, s ? i : i + 1)),
   );
