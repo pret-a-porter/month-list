@@ -1,4 +1,4 @@
-import { getMonthList } from './index';
+import { getMonthList } from '../index';
 
 describe('getMonthList', () => {
   test('Should return list of month names', () => {

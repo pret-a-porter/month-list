@@ -9,8 +9,9 @@
   "scripts": {
     "build": "tsc",
     "postbuild": "size-limit",
-    "prepare": "rm -rf lib && npm run build",
-    "test": "jest --detectOpenHandles --no-cache"
+    "prebuild": "rm -rf lib",
+    "prepare": "npm run build",
+    "test": "jest --no-cache"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.5.0",
