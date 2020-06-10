@@ -1,6 +1,6 @@
 export const getMonthList = (
   l?: string | string[],
-  f?: 'long' | 'short' | 'numeric',
+  f?: 'long' | 'short' | 'narrow' | '2-digit' | 'numeric',
 ): string[] =>
   Array.from(Array(12).keys(), (i) =>
     new Intl.DateTimeFormat(l, {
