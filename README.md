@@ -12,7 +12,7 @@ Function returns month list in your locale;
 npm install month-list --save
 ```
 
-or 
+or
 
 ```sh
 yarn add month-list
@@ -22,7 +22,7 @@ yarn add month-list
 
 🇬🇧 `getMonthList('en')` will return:
 
-```js
+```text
 January
 February
 March
@@ -39,7 +39,7 @@ December
 
 🇬🇧 `getMonthList('en', 'short')` will return:
 
-```js
+```text
 Jan
 Feb
 Mar
@@ -56,7 +56,7 @@ Dec
 
 🇬🇧 `getWeekDays('en')` will return:
 
-```js
+```text
 Monday
 Tuesday
 Wednesday
@@ -68,7 +68,7 @@ Sunday
 
 🇬🇧 `getWeekDays('en', 'long', true)` will return:
 
-```js
+```text
 Sunday
 Monday
 Tuesday
@@ -80,7 +80,7 @@ Saturday
 
 🇬🇧 `getWeekDays('en', 'short')` will return:
 
-```js
+```text
 Mon
 Tue
 Wed
@@ -92,7 +92,7 @@ Sun
 
 🇬🇧 `getWeekDays('en', 'narrow')` will return:
 
-```js
+```text
 M
 T
 W

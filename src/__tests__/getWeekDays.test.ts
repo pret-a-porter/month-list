@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import { getWeekDays } from '../index';
 
 describe('getWeekDays', () => {
