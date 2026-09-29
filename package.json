@@ -19,7 +19,10 @@
     "./package.json": "./package.json"
   },
   "sideEffects": false,
-  "repository": "https://github.com/pret-a-porter/month-list.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pret-a-porter/month-list.git"
+  },
   "author": "Maksim Sharipov <m.v.sharipov@gmail.com>",
   "license": "MIT",
   "scripts": {
