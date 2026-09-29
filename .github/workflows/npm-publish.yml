@@ -13,17 +13,12 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    env:
-      # Publishing uses npm trusted publishing (OIDC), not a token. setup-node
-      # still writes an .npmrc referencing this, and yarn fails if it is unset.
-      NODE_AUTH_TOKEN: ''
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
         with:
           node-version: 24
-          registry-url: https://registry.npmjs.org/
           cache: yarn
       - run: yarn install --frozen-lockfile
       - run: yarn test
-      - run: npm publish --provenance --access public
+      - run: npm publish --provenance --access public --loglevel verbose
