@@ -1,16 +1,13 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "downlevelIteration": true,
-    "experimentalDecorators": false,
-    "forceConsistentCasingInFileNames": true,
-    "lib": ["dom", "es6", "es2016", "es2017"],
-    "outDir": "lib",
-    "removeComments": true,
-    "sourceMap": false,
+    "target": "es2018",
+    "lib": ["es2020"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "strict": true,
-    "target": "es5"
+    "noEmit": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"],
-  "exclude": ["**/**/__tests__"]
+  "include": ["src", "tsdown.config.mts"]
 }

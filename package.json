@@ -1,14 +1,29 @@
 {
   "name": "month-list",
   "version": "1.0.6",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "type": "commonjs",
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.cts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/index.d.mts",
+        "default": "./lib/index.mjs"
+      },
+      "require": {
+        "types": "./lib/index.d.cts",
+        "default": "./lib/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
   "repository": "https://github.com/pret-a-porter/month-list.git",
   "author": "Maksim Sharipov <m.v.sharipov@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prebuild": "rm -rf lib",
-    "build": "tsc",
+    "build": "tsdown",
     "postbuild": "size-limit",
     "prepare": "npm run build",
     "test": "vitest run",
@@ -23,6 +38,7 @@
     "eslint": "^10.11.0",
     "prettier": "^3.9.9",
     "size-limit": "^14.1.0",
+    "tsdown": "^0.23.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.71.0",
     "vite": "^8.3.1",
@@ -35,11 +51,17 @@
     "url": "https://github.com/pret-a-porter/month-list/issues"
   },
   "engines": {
-    "node": ">= 10"
+    "node": ">=18"
   },
   "size-limit": [
     {
-      "path": "lib/index.js",
+      "name": "ESM",
+      "path": "lib/index.mjs",
+      "limit": "300 B"
+    },
+    {
+      "name": "CJS",
+      "path": "lib/index.cjs",
       "limit": "300 B"
     }
   ]
