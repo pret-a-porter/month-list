@@ -35,6 +35,7 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@size-limit/preset-small-lib": "^14.1.0",
+    "@types/node": "^22",
     "eslint": "^10.11.0",
     "prettier": "^3.9.9",
     "size-limit": "^14.1.0",
