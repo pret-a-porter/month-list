@@ -14,8 +14,9 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
-      # setup-node writes an .npmrc that references this; yarn fails if it is unset
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # Publishing uses npm trusted publishing (OIDC), not a token. setup-node
+      # still writes an .npmrc referencing this, and yarn fails if it is unset.
+      NODE_AUTH_TOKEN: ''
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
