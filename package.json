@@ -59,14 +59,44 @@
   },
   "size-limit": [
     {
-      "name": "ESM",
+      "name": "All (ESM)",
       "path": "lib/index.mjs",
-      "limit": "300 B"
+      "limit": "650 B"
     },
     {
-      "name": "CJS",
+      "name": "All (CJS)",
       "path": "lib/index.cjs",
-      "limit": "300 B"
+      "limit": "650 B"
+    },
+    {
+      "name": "getMonthList",
+      "path": "lib/index.mjs",
+      "import": "{ getMonthList }",
+      "limit": "250 B"
+    },
+    {
+      "name": "getWeekDays",
+      "path": "lib/index.mjs",
+      "import": "{ getWeekDays }",
+      "limit": "250 B"
+    },
+    {
+      "name": "getWeekInfo",
+      "path": "lib/index.mjs",
+      "import": "{ getWeekInfo }",
+      "limit": "250 B"
+    },
+    {
+      "name": "getDayPeriods",
+      "path": "lib/index.mjs",
+      "import": "{ getDayPeriods }",
+      "limit": "250 B"
+    },
+    {
+      "name": "getFieldNames",
+      "path": "lib/index.mjs",
+      "import": "{ getFieldNames }",
+      "limit": "250 B"
     }
   ],
   "description": "Localized month and weekday names from Intl.DateTimeFormat"

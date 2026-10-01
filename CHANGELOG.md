@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.1.0
+
+### Features
+
+- `getMonthList` takes a third argument, `context`. `'format'` returns month names as written inside a date, e.g. Russian `января` instead of `январь`.
+- `getWeekInfo(locale)` returns the locale's first day of the week and weekend days, ready to pass to `getWeekDays`.
+- `getDayPeriods(locale)` returns the AM/PM labels, e.g. `['午前', '午後']` in Japanese.
+- `getFieldNames(locale, format)` returns localized names of date and time fields such as "month" and "weekday".
+- New exported types: `MonthContext`, `DayNumber`, `WeekInfo` and `DateTimeField`.
+
 ## 2.0.1
 
 - Fix `getMonthList` for locales whose default calendar is not Gregorian. `getMonthList('fa')` used to start from دی (a Persian month), and `he-u-ca-hebrew` repeated a month. It now always returns the Gregorian months January to December.

@@ -81,3 +81,28 @@ describe('getMonthList calendars', () => {
     expect(getMonthList('he-u-ca-hebrew')).toEqual(getMonthList('he'));
   });
 });
+
+describe('getMonthList context', () => {
+  test('Should return month names as used inside a date', () => {
+    expect(getMonthList('ru', 'long', 'format').slice(0, 3)).toEqual([
+      'января',
+      'февраля',
+      'марта',
+    ]);
+    expect(getMonthList('pl', 'long', 'format')[0]).toBe('stycznia');
+    expect(getMonthList('fi', 'long', 'format')[0]).toBe('tammikuuta');
+  });
+
+  test('Should keep standalone names where the date form is a number', () => {
+    expect(getMonthList('ja', 'long', 'format')).toEqual(getMonthList('ja'));
+    expect(getMonthList('en', 'numeric', 'format')).toEqual(
+      getMonthList('en', 'numeric'),
+    );
+  });
+
+  test('Should match standalone names where the language has no cases', () => {
+    expect(getMonthList('en', 'short', 'format')).toEqual(
+      getMonthList('en', 'short'),
+    );
+  });
+});
