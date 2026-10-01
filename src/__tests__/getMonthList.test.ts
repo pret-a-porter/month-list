@@ -74,3 +74,10 @@ describe('getMonthList formats and locales', () => {
     );
   });
 });
+
+describe('getMonthList calendars', () => {
+  test('Should return Gregorian months for locales with another default calendar', () => {
+    expect(getMonthList('fa')[0]).toBe('ژانویه');
+    expect(getMonthList('he-u-ca-hebrew')).toEqual(getMonthList('he'));
+  });
+});

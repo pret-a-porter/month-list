@@ -68,5 +68,6 @@
       "path": "lib/index.cjs",
       "limit": "300 B"
     }
-  ]
+  ],
+  "description": "Localized month and weekday names from Intl.DateTimeFormat"
 }

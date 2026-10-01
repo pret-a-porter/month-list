@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.1
+
+- Fix `getMonthList` for locales whose default calendar is not Gregorian. `getMonthList('fa')` used to start from دی (a Persian month), and `he-u-ca-hebrew` repeated a month. It now always returns the Gregorian months January to December.
+- Add a package description for npm.
+
 ## 2.0.0
 
 ### Breaking changes

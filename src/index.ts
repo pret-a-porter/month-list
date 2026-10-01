@@ -9,13 +9,17 @@ export type WeekdayFormat = 'long' | 'short' | 'narrow';
 export type FirstDay = 1 | 2 | 3 | 4 | 5 | 6 | 7 | boolean;
 
 /**
- * Returns the 12 month names for the given locale, starting from January.
+ * Returns the 12 Gregorian month names for the given locale, starting from
+ * January, even for locales whose default calendar is different (e.g. `fa`).
  */
 export const getMonthList = (
   locale?: Intl.LocalesArgument,
   format: MonthFormat = 'long',
 ): string[] => {
-  const formatter = new Intl.DateTimeFormat(locale, { month: format });
+  const formatter = new Intl.DateTimeFormat(locale, {
+    month: format,
+    calendar: 'gregory',
+  });
   return Array.from(Array(12).keys(), (i) => formatter.format(new Date(0, i)));
 };
 
